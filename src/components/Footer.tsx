@@ -43,7 +43,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="mt-8 pt-8 border-t border-border flex flex-wrap justify-center gap-6 text-sm">
-            {['Home', 'About', 'Experience', 'Projects', 'Certificates', 'Contact'].map((link) => (
+            {['Home', 'About', 'Experience', 'Projects', 'Activities', 'Certificates', 'Contact'].map((link) => (
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}

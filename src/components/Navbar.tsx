@@ -7,6 +7,7 @@ const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
+  { href: '#activities', label: 'Activities' },
   { href: '#certificates', label: 'Certificates' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -49,14 +50,14 @@ const Navbar = () => {
             }}
             className="text-lg font-bold text-foreground hover:text-primary transition-colors flex items-center gap-2"
           >
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-sm font-bold">
+            <span className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-lg font-bold shadow-md">
               P
             </span>
-            <span className="gradient-text text-xl">Padma Portfolio</span>
+            <span className="gradient-text text-xl font-bold">Padma Portfolio</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -71,10 +72,12 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <Button size="sm" className="gap-2">
-              <Download className="w-4 h-4" />
-              Resume
-            </Button>
+            <a href="/padmanagasri_resume_.pdf" download>
+              <Button size="sm" className="gap-2">
+                <Download className="w-4 h-4" />
+                Resume
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -104,10 +107,12 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button size="sm" className="gap-2 w-fit">
-                <Download className="w-4 h-4" />
-                Resume
-              </Button>
+              <a href="/padmanagasri_resume_.pdf" download className="w-fit">
+                <Button size="sm" className="gap-2">
+                  <Download className="w-4 h-4" />
+                  Resume
+                </Button>
+              </a>
             </div>
           </div>
         )}
