@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="blue1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2196F3"/>
+      <stop offset="100%" stop-color="#1565C0"/>
+    </linearGradient>
+    <linearGradient id="blue2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1976D2"/>
+      <stop offset="100%" stop-color="#0D47A1"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" rx="16" fill="white"/>
+  
+  <!-- NXT text -->
+  <!-- N -->
+  <polygon points="40,50 65,50 100,105 100,50 125,50 125,130 100,130 65,75 65,130 40,130" fill="url(#blue1)"/>
+  <!-- X -->
+  <polygon points="135,50 160,50 185,85 210,50 235,50 200,100 235,130 210,130 185,115 160,130 135,130 170,100" fill="url(#blue1)"/>
+  <!-- T -->
+  <rect x="240" y="50" width="120" height="25" fill="url(#blue1)"/>
+  <rect x="285" y="50" width="30" height="80" fill="url(#blue1)"/>
+  
+  <!-- WAVE text -->
+  <!-- W -->
+  <path d="M 40,160 L 60,160 L 75,225 L 95,175 L 105,175 L 125,225 L 140,160 L 160,160 L 130,250 L 110,250 L 95,205 L 80,250 L 60,250 Z" fill="url(#blue2)"/>
+  <!-- A with arrow -->
+  <path d="M 165,250 L 195,160 L 210,160 L 210,140 L 225,160 L 225,160 L 240,250 L 220,250 L 215,230 L 185,230 L 180,250 Z M 190,215 L 210,215 L 200,180 Z" fill="url(#blue2)"/>
+  <!-- V -->
+  <polygon points="245,160 265,160 285,230 305,160 325,160 295,250 275,250" fill="url(#blue2)"/>
+  <!-- E (rounded) -->
+  <rect x="330" y="160" width="55" height="90" rx="12" fill="url(#blue2)"/>
+  <rect x="345" y="175" width="40" height="20" rx="6" fill="white"/>
+  <rect x="345" y="220" width="40" height="15" rx="5" fill="white"/>
+  <rect x="345" y="198" width="25" height="12" rx="4" fill="white"/>
+</svg>
