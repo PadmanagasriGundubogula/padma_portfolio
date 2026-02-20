@@ -1,11 +1,11 @@
 import { Star, Mic, BookOpen, Trophy, ChevronRight } from 'lucide-react';
 
 const toastmasterLevels = [
-    { level: 'Level 1', title: 'Mastering Fundamentals', certificate: '/certificates/l1 presentation mastery.pdf' },
-    { level: 'Level 2', title: 'Learning Your Style', certificate: '/certificates/l2 presentation mstery.pdf' },
-    { level: 'Level 3', title: 'Increasing Knowledge', certificate: '/certificates/l3 presentation mastery.pdf' },
-    { level: 'Level 4', title: 'Building Skills', certificate: '/certificates/l4 presentation mastery.pdf' },
-    { level: 'Level 5', title: 'Demonstrating Expertise', certificate: '/certificates/l5 presentation mastery.pdf' },
+    { level: 'Level 1', title: 'Mastering Fundamentals', certificate: './certificates/l1 presentation mastery.pdf' },
+    { level: 'Level 2', title: 'Learning Your Style', certificate: './certificates/l2 presentation mstery.pdf' },
+    { level: 'Level 3', title: 'Increasing Knowledge', certificate: './certificates/l3 presentation mastery.pdf' },
+    { level: 'Level 4', title: 'Building Skills', certificate: './certificates/l4 presentation mastery.pdf' },
+    { level: 'Level 5', title: 'Demonstrating Expertise', certificate: './certificates/l5 presentation mastery.pdf' },
 ];
 
 const ActivitiesSection = () => {
