@@ -1,10 +1,9 @@
-import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com/padmanagasri', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/padmanagasri', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com/padmanagasri', label: 'Twitter' },
-  { icon: Mail, href: 'mailto:padma.nagasri@email.com', label: 'Email' },
+  { icon: Github, href: 'https://github.com/PadmanagasriGundubogula', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/padmanagasri-gundubogula/', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:padmanagasrigundubogula@gmail.com', label: 'Email' },
 ];
 
 const Footer = () => {

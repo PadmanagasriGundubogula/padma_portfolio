@@ -33,11 +33,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-background/90 backdrop-blur-md shadow-soft'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -48,9 +47,12 @@ const Navbar = () => {
               e.preventDefault();
               handleNavClick('#home');
             }}
-            className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
+            className="text-lg font-bold text-foreground hover:text-primary transition-colors flex items-center gap-2"
           >
-            <span className="gradient-text">PNG</span>
+            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-sm font-bold">
+              P
+            </span>
+            <span className="gradient-text text-xl">Padma Portfolio</span>
           </a>
 
           {/* Desktop Navigation */}
