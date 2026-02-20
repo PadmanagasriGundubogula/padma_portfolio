@@ -27,9 +27,9 @@ const ActivitiesSection = () => {
                         {/* Toastmasters Card */}
                         <div className="rounded-2xl bg-card shadow-soft hover:shadow-card transition-all duration-300 overflow-hidden border border-border">
                             {/* Header */}
-                            <div className="bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 p-6 text-white">
+                            <div className="bg-gradient-to-br from-blue-800 via-blue-900 to-slate-900 p-6 text-white">
                                 <div className="flex items-center gap-3 mb-3">
-                                    <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                                    <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
                                         <Mic className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
@@ -38,7 +38,7 @@ const ActivitiesSection = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-2 mt-2">
-                                    <Trophy className="w-4 h-4 text-yellow-200" />
+                                    <Trophy className="w-4 h-4 text-yellow-300" />
                                     <span className="text-sm text-white/90 font-medium">All 5 Levels Completed</span>
                                 </div>
                             </div>
@@ -52,12 +52,12 @@ const ActivitiesSection = () => {
                                     Each level builds upon the last, culminating in expert-level public speaking and communication abilities.
                                 </p>
 
-                                {/* Toastmaster Certificate Image */}
-                                <div className="mb-5 rounded-xl overflow-hidden border border-border shadow-soft">
+                                {/* Toastmasters International Logo */}
+                                <div className="mb-5 rounded-xl overflow-hidden border border-border shadow-soft bg-transparent flex items-center justify-center aspect-video">
                                     <img
-                                        src="/certificates/Adobe Scan 10-Sept-2023 (4)_1.jpg"
-                                        alt="Toastmasters Certificate"
-                                        className="w-full h-40 object-cover hover:scale-105 transition-transform duration-500"
+                                        src="./download.jpg"
+                                        alt="Toastmasters International"
+                                        className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                                     />
                                 </div>
 
@@ -72,7 +72,7 @@ const ActivitiesSection = () => {
                                             rel="noopener noreferrer"
                                             className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
                                         >
-                                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">
+                                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-700 to-blue-900 flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">
                                                 {index + 1}
                                             </div>
                                             <div className="flex-1 min-w-0">
@@ -88,12 +88,12 @@ const ActivitiesSection = () => {
                                 {/* Additional Toastmaster Achievements */}
                                 <div className="mt-4 pt-4 border-t border-border">
                                     <a
-                                        href="/certificates/triple crown award.jpg"
+                                        href="./certificates/triple crown award.jpg"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
                                     >
-                                        <Trophy className="w-5 h-5 text-amber-500" />
+                                        <Trophy className="w-5 h-5 text-yellow-500" />
                                         <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
                                             Triple Crown Award 🏆
                                         </span>
@@ -131,12 +131,13 @@ const ActivitiesSection = () => {
                                     covers web development technologies including HTML, CSS, JavaScript, React, and Python.
                                 </p>
 
-                                {/* Badge Image */}
-                                <div className="mb-5 rounded-xl overflow-hidden border border-border shadow-soft">
+                                {/* NxtWave Logo */}
+                                <div className="mb-5 rounded-xl overflow-hidden shadow-soft flex items-center justify-center aspect-video relative group border border-border">
+                                    <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
                                     <img
-                                        src="/certificates/3rd week badge.png"
-                                        alt="NxtWave 3rd Week Coding Badge"
-                                        className="w-full h-48 object-contain bg-secondary/30 p-4 hover:scale-105 transition-transform duration-500"
+                                        src="./nxtwave-original.webp"
+                                        alt="NxtWave Badge"
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 </div>
 
@@ -144,7 +145,7 @@ const ActivitiesSection = () => {
                                 <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-3">Courses & Certifications</p>
                                 <div className="space-y-2">
                                     <a
-                                        href="/certificates/uiux certificate.jpg"
+                                        href="./certificates/uiux certificate.jpg"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
@@ -158,7 +159,7 @@ const ActivitiesSection = () => {
                                     </a>
 
                                     <a
-                                        href="/certificates/static web certificate.pdf"
+                                        href="./certificates/static web certificate.pdf"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
@@ -172,7 +173,7 @@ const ActivitiesSection = () => {
                                     </a>
 
                                     <a
-                                        href="/certificates/css and java certificate.pdf"
+                                        href="./certificates/css and java certificate.pdf"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
@@ -186,7 +187,7 @@ const ActivitiesSection = () => {
                                     </a>
 
                                     <a
-                                        href="/certificates/python certificate.pdf"
+                                        href="./certificates/python certificate.pdf"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"

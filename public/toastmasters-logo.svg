@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a7ca5"/>
+      <stop offset="100%" stop-color="#2c5f7c"/>
+    </linearGradient>
+    <linearGradient id="globe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a7ca5"/>
+      <stop offset="100%" stop-color="#1a4a6a"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="400" rx="20" fill="url(#bg)"/>
+  <!-- Outer ring -->
+  <circle cx="200" cy="185" r="135" fill="#8B1A1A" stroke="none"/>
+  <circle cx="200" cy="185" r="128" fill="#C5A030" stroke="none"/>
+  <circle cx="200" cy="185" r="122" fill="#8B1A1A" stroke="none"/>
+  <!-- Globe -->
+  <circle cx="200" cy="185" r="115" fill="url(#globe)"/>
+  <!-- Globe lines - meridians -->
+  <ellipse cx="200" cy="185" rx="115" ry="115" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <ellipse cx="200" cy="185" rx="75" ry="115" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <ellipse cx="200" cy="185" rx="35" ry="115" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <!-- Globe lines - parallels -->
+  <ellipse cx="200" cy="120" rx="105" ry="25" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <ellipse cx="200" cy="185" rx="115" ry="25" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <ellipse cx="200" cy="250" rx="105" ry="25" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <!-- Diagonal arc lines -->
+  <path d="M 100 100 Q 200 230 300 100" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+  <path d="M 100 270 Q 200 140 300 270" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+  <!-- Banner background -->
+  <rect x="72" y="165" width="256" height="55" fill="white"/>
+  <rect x="68" y="163" width="264" height="4" fill="#8B1A1A"/>
+  <rect x="68" y="218" width="264" height="4" fill="#8B1A1A"/>
+  <!-- Text -->
+  <text x="200" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1a4a6a" letter-spacing="3">TOASTMASTERS</text>
+  <text x="200" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#8B1A1A" letter-spacing="5">INTERNATIONAL</text>
+  <!-- Registered mark -->
+  <text x="312" y="213" font-family="Arial, sans-serif" font-size="8" fill="#8B1A1A">®</text>
+</svg>

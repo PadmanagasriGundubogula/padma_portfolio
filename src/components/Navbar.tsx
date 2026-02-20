@@ -35,8 +35,8 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-background/90 backdrop-blur-md shadow-soft'
-          : 'bg-transparent'
+        ? 'bg-background/90 backdrop-blur-md shadow-soft'
+        : 'bg-transparent'
         }`}
     >
       <div className="container mx-auto px-4 sm:px-6">
@@ -53,7 +53,7 @@ const Navbar = () => {
             <span className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-lg font-bold shadow-md">
               P
             </span>
-            <span className="gradient-text text-xl font-bold">Padma Portfolio</span>
+            <span className="gradient-text text-xl font-bold">Padma Nagasri</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -72,7 +72,7 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <a href="/padmanagasri_resume_.pdf" download>
+            <a href="./padmanagasri_resume_.pdf" download>
               <Button size="sm" className="gap-2">
                 <Download className="w-4 h-4" />
                 Resume
@@ -107,7 +107,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a href="/padmanagasri_resume_.pdf" download className="w-fit">
+              <a href="./padmanagasri_resume_.pdf" download className="w-fit">
                 <Button size="sm" className="gap-2">
                   <Download className="w-4 h-4" />
                   Resume

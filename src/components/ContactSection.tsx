@@ -39,12 +39,13 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    window.location.href = `mailto:padmanagasrigundubogula@gmail.com?subject=${subject}&body=${body}`;
 
     toast({
-      title: 'Message sent!',
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: 'Email client opened!',
+      description: "Please send the email from your application.",
     });
 
     setFormData({ name: '', email: '', message: '' });

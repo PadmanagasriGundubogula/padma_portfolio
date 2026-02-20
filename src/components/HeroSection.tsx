@@ -51,7 +51,7 @@ const HeroSection = () => {
               View Projects
               <ArrowRight className="w-4 h-4" />
             </Button>
-            <a href="/padmanagasri_resume_.pdf" download>
+            <a href="./padmanagasri_resume_.pdf" download>
               <Button size="lg" variant="outline" className="gap-2 px-8">
                 <Download className="w-4 h-4" />
                 Download Resume
