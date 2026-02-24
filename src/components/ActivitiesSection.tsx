@@ -8,6 +8,15 @@ const toastmasterLevels = [
     { level: 'Level 5', title: 'Demonstrating Expertise', certificate: './certificates/l5 presentation mastery.pdf' },
 ];
 
+const nxtwaveCycles = [
+    { cycle: 'Cycle 1', title: 'Projects Champ', status: 'Completed', progress: '100%' },
+    { cycle: 'Cycle 2', title: 'Programming Master', status: 'In Progress (SQL Done)', progress: '65%' },
+    { cycle: 'Cycle 3', title: 'Dynamic Websites Creator', status: 'In Progress', progress: '39%' },
+    { cycle: 'Cycle 4', title: 'Full Stack Foundations', status: 'Upcoming', progress: '0%' },
+    { cycle: 'Cycle 5', title: 'Full Stack Advanced', status: 'Upcoming', progress: '20%' },
+    { cycle: 'Cycle 6', title: 'Elementary CP', status: 'Upcoming', progress: '36%' },
+];
+
 const ActivitiesSection = () => {
     return (
         <section id="activities" className="py-20 md:py-28 px-4 bg-gradient-to-b from-background to-secondary/30">
@@ -104,35 +113,34 @@ const ActivitiesSection = () => {
                         </div>
 
                         {/* NxtWave Card */}
-                        <div className="rounded-2xl bg-card shadow-soft hover:shadow-card transition-all duration-300 overflow-hidden border border-border">
+                        <div className="rounded-2xl bg-card shadow-soft hover:shadow-card transition-all duration-300 overflow-hidden border border-border flex flex-col">
                             {/* Header */}
-                            <div className="bg-gradient-to-br from-blue-500 via-indigo-500 to-violet-500 p-6 text-white">
+                            <div className="bg-gradient-to-br from-blue-500 via-indigo-500 to-violet-500 p-6 text-white shrink-0">
                                 <div className="flex items-center gap-3 mb-3">
-                                    <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                                    <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/20">
                                         <BookOpen className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-bold">NxtWave Learning</h3>
-                                        <p className="text-white/80 text-sm">Consistent Coding & Skill Development</p>
+                                        <p className="text-white/80 text-sm">CCBP 4.0 Academy Program</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-2 mt-2">
                                     <Star className="w-4 h-4 text-yellow-200" />
-                                    <span className="text-sm text-white/90 font-medium">3-Week Consistent Coding Badge</span>
+                                    <span className="text-sm text-white/90 font-medium">Growth Cycle 1 Completed</span>
                                 </div>
                             </div>
 
                             {/* Content */}
-                            <div className="p-6">
+                            <div className="p-6 flex-1 flex flex-col">
                                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                                     Actively learning and building skills through <span className="text-foreground font-medium">NxtWave's CCBP 4.0</span> platform.
-                                    Earned the <span className="text-primary font-medium">3rd Week Coding Badge</span> for maintaining
-                                    consistent daily coding practice for 3 consecutive weeks. This dedication to continuous learning
-                                    covers web development technologies including HTML, CSS, JavaScript, React, and Python.
+                                    The curriculum consists of <span className="text-primary font-medium">6 Growth Cycles</span>, each packed with specialized sub-courses.
+                                    Successfully completed <span className="text-foreground font-medium">Growth Cycle 1</span> and SQL in Cycle 2, currently working towards earning the Python certification.
                                 </p>
 
                                 {/* NxtWave Logo */}
-                                <div className="mb-5 rounded-xl overflow-hidden shadow-soft flex items-center justify-center aspect-video relative group border border-border">
+                                <div className="mb-5 rounded-xl overflow-hidden shadow-soft flex items-center justify-center aspect-video relative group border border-border shrink-0">
                                     <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
                                     <img
                                         src="./nxtwave-original.webp"
@@ -141,71 +149,74 @@ const ActivitiesSection = () => {
                                     />
                                 </div>
 
-                                {/* Skills Learned */}
-                                <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-3">Courses & Certifications</p>
-                                <div className="space-y-2">
-                                    <a
-                                        href="./certificates/uiux certificate.jpg"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
-                                    >
-                                        <span className="text-lg">🎨</span>
-                                        <div className="flex-1">
-                                            <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">UI/UX Development</p>
-                                            <p className="text-xs text-muted-foreground">Design Fundamentals & Prototyping</p>
+                                {/* Growth Cycles */}
+                                <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-3">Growth Cycles Journey</p>
+                                <div className="space-y-2 mb-6">
+                                    {nxtwaveCycles.map((item, index) => (
+                                        <div
+                                            key={item.cycle}
+                                            className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
+                                        >
+                                            <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 shadow-sm ${item.status.includes('Completed') ? 'bg-gradient-to-br from-green-500 to-emerald-600 text-white' : item.status.includes('In Progress') ? 'bg-gradient-to-br from-blue-500 to-indigo-600 text-white' : 'bg-secondary text-muted-foreground border border-border'
+                                                }`}>
+                                                {index + 1}
+                                            </div>
+                                            <div className="flex-1 min-w-0">
+                                                <div className="flex justify-between items-center w-full">
+                                                    <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                                                        {item.title}
+                                                    </p>
+                                                    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${item.status.includes('Completed') ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
+                                                        item.status.includes('In Progress') ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
+                                                            'bg-secondary text-muted-foreground'
+                                                        }`}>
+                                                        {item.progress}
+                                                    </span>
+                                                </div>
+                                                <p className="text-xs text-muted-foreground">{item.status}</p>
+                                            </div>
                                         </div>
-                                        <ChevronRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    </a>
-
-                                    <a
-                                        href="./certificates/static web certificate.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
-                                    >
-                                        <span className="text-lg">🌐</span>
-                                        <div className="flex-1">
-                                            <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Static Website Development</p>
-                                            <p className="text-xs text-muted-foreground">HTML, CSS & Responsive Design</p>
-                                        </div>
-                                        <ChevronRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    </a>
-
-                                    <a
-                                        href="./certificates/css and java certificate.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
-                                    >
-                                        <span className="text-lg">☕</span>
-                                        <div className="flex-1">
-                                            <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">CSS & JavaScript</p>
-                                            <p className="text-xs text-muted-foreground">Interactive Web Development</p>
-                                        </div>
-                                        <ChevronRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    </a>
-
-                                    <a
-                                        href="./certificates/python certificate.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
-                                    >
-                                        <span className="text-lg">🐍</span>
-                                        <div className="flex-1">
-                                            <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Python Programming</p>
-                                            <p className="text-xs text-muted-foreground">Core Python & Data Structures</p>
-                                        </div>
-                                        <ChevronRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    </a>
+                                    ))}
                                 </div>
 
-                                {/* Highlight */}
-                                <div className="mt-5 p-4 rounded-xl bg-gradient-to-r from-blue-500/10 to-violet-500/10 border border-primary/20">
-                                    <p className="text-sm text-foreground font-medium flex items-center gap-2">
-                                        🔥 Consistent coder — 3 weeks of daily practice and counting!
-                                    </p>
+                                {/* Certificates */}
+                                <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-3 mt-auto">Certifications & Events</p>
+                                <div className="space-y-2">
+                                    <a
+                                        href="./certificates/sql_certificate.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
+                                    >
+                                        <span className="text-lg">🗄️</span>
+                                        <div className="flex-1">
+                                            <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">SQL Fundamentals</p>
+                                            <p className="text-xs text-muted-foreground">Introduction to Databases</p>
+                                        </div>
+                                        <ChevronRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    </a>
+
+                                    <a
+                                        href="./certificates/responsive_web_certificate.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200"
+                                    >
+                                        <span className="text-lg">📱</span>
+                                        <div className="flex-1">
+                                            <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Responsive Web Design</p>
+                                            <p className="text-xs text-muted-foreground">Building mobile-first applications</p>
+                                        </div>
+                                        <ChevronRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    </a>
+
+                                    <div className="group flex items-center gap-3 p-3 rounded-lg hover:bg-secondary/80 transition-all duration-200 cursor-default">
+                                        <span className="text-lg">🎙️</span>
+                                        <div className="flex-1">
+                                            <p className="text-sm font-medium text-foreground transition-colors">Events, Workshops & Podcasts</p>
+                                            <p className="text-xs text-muted-foreground">Actively participating & earning certificates</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
