@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/PadmanagasriGundubogula', label: 'GitHub' },
@@ -16,11 +16,18 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo & Copyright */}
             <div className="text-center md:text-left">
-              <p className="text-lg font-semibold text-foreground mb-1">
-                <span className="gradient-text">Padma Nagasri G.</span>
-              </p>
-              <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-start gap-1">
-                Built with <Heart className="w-4 h-4 text-accent" /> © {currentYear}
+              <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
+                <span className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-sm font-bold shadow-xs">
+                  P
+                </span>
+                <p className="text-lg font-bold text-foreground">
+                  <span className="gradient-text">Padma Nagasri G.</span>
+                </p>
+              </div>
+              <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-start gap-1.5">
+                <span>Designed & Built by</span>
+                <span className="font-semibold text-foreground">Padma Nagasri</span>
+                <span>© {currentYear}</span>
               </p>
             </div>
 
